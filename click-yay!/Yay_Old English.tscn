@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dkmxt5dliwr3d"]
 
 [ext_resource type="Texture2D" uid="uid://cr1g1s5401f73" path="res://norse-yay-normal.png" id="1_5pfck"]
+[ext_resource type="Texture2D" uid="uid://dsm5fnafymx1r" path="res://old-english-bg.jpg" id="1_a0ktm"]
 [ext_resource type="Texture2D" uid="uid://c3ui62js5vtk8" path="res://norse-yay-pressed.png" id="2_cxnaj"]
 [ext_resource type="Script" uid="uid://bpcjq0jxyqmcq" path="res://texture_button.gd" id="3_3qs27"]
 [ext_resource type="AudioStream" uid="uid://c0r2e2kujgl6" path="res://Audio/YouWonOldEng.wav" id="4_5pfck"]
@@ -10,16 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://bsplvmnpgtlmy" path="res://arrow-button.png" id="8_3qs27"]
 [ext_resource type="Texture2D" uid="uid://dnvpwxeskkge7" path="res://x-button.png" id="8_cxnaj"]
 
-[sub_resource type="Gradient" id="Gradient_sfphs"]
-offsets = PackedFloat32Array(0.012019231, 0.50721157, 1)
-colors = PackedColorArray(0.60166335, 0.35990003, 0.61, 1, 0.588, 0.84, 0.6216, 1, 1, 0.26, 0.27233315, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_sfphs"]
-gradient = SubResource("Gradient_sfphs")
-width = 1182
-height = 714
-fill_to = Vector2(1, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_sqhn2"]
 font_size = 45
 
@@ -27,7 +18,9 @@ font_size = 45
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1854624668]
 z_index = -3
-texture = SubResource("GradientTexture2D_sfphs")
+position = Vector2(2.5000305, -2.9999847)
+scale = Vector2(9.101562, 5.1874995)
+texture = ExtResource("1_a0ktm")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=994944958]
 

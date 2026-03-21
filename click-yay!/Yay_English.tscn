@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cl7mv3i1x7evi"]
 
+[ext_resource type="Texture2D" uid="uid://vv1onu5lala" path="res://modern-bg.jpg" id="1_3btew"]
 [ext_resource type="Texture2D" uid="uid://ct3iki7engpgn" path="res://yay-button-normal.png" id="1_sfphs"]
 [ext_resource type="Script" uid="uid://bpcjq0jxyqmcq" path="res://texture_button.gd" id="1_sqhn2"]
 [ext_resource type="Texture2D" uid="uid://ddq1rsf44jqbn" path="res://yay-button-pressed.png" id="2_2jjgh"]
@@ -10,16 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://dnvpwxeskkge7" path="res://x-button.png" id="8_qainw"]
 [ext_resource type="Texture2D" uid="uid://bsplvmnpgtlmy" path="res://arrow-button.png" id="9_quts2"]
 
-[sub_resource type="Gradient" id="Gradient_sfphs"]
-offsets = PackedFloat32Array(0.012019231, 0.50721157, 1)
-colors = PackedColorArray(0.60166335, 0.35990003, 0.61, 1, 0.588, 0.84, 0.6216, 1, 1, 0.26, 0.27233315, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_sfphs"]
-gradient = SubResource("Gradient_sfphs")
-width = 1182
-height = 714
-fill_to = Vector2(1, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_sqhn2"]
 font_size = 45
 
@@ -27,7 +18,10 @@ font_size = 45
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1854624668]
 z_index = -3
-texture = SubResource("GradientTexture2D_sfphs")
+texture_filter = 1
+position = Vector2(6, -0.49998474)
+scale = Vector2(9.109375, 5.1953125)
+texture = ExtResource("1_3btew")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=994944958]
 
