@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://c4l6f01si1qg1"]
+
+[ext_resource type="Texture2D" uid="uid://ct3iki7engpgn" path="res://yay-button-normal.png" id="1_0amsv"]
+[ext_resource type="Texture2D" uid="uid://ddq1rsf44jqbn" path="res://yay-button-pressed.png" id="2_hpepw"]
+[ext_resource type="Script" uid="uid://bpcjq0jxyqmcq" path="res://texture_button.gd" id="3_p74w3"]
+[ext_resource type="AudioStream" uid="uid://2ylrd2irkmgf" path="res://Audio/youwon.wav" id="4_f71x8"]
+
+[sub_resource type="Gradient" id="Gradient_sfphs"]
+offsets = PackedFloat32Array(0.012019231, 0.50721157, 1)
+colors = PackedColorArray(0.60166335, 0.35990003, 0.61, 1, 0.588, 0.84, 0.6216, 1, 1, 0.26, 0.27233315, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sfphs"]
+gradient = SubResource("Gradient_sfphs")
+width = 1182
+height = 714
+fill_to = Vector2(1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sqhn2"]
+font_size = 45
+
+[node name="Node2D" type="Node2D" unique_id=1959497165]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1854624668]
+z_index = -3
+texture = SubResource("GradientTexture2D_sfphs")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=994944958]
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=309436364]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -106.0
+offset_right = -128.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10, 10)
+texture_normal = ExtResource("1_0amsv")
+texture_pressed = ExtResource("2_hpepw")
+script = ExtResource("3_p74w3")
+
+[node name="Alex_Sound" type="AudioStreamPlayer2D" parent="." unique_id=315060128]
+stream = ExtResource("4_f71x8")
+volume_db = 3.493
+
+[node name="Label" type="Label" parent="." unique_id=649480505]
+offset_left = -271.0
+offset_top = -280.645
+offset_right = 272.0
+offset_bottom = -141.64499
+text = "Yo Yo Yo Click Yay, Bitch"
+label_settings = SubResource("LabelSettings_sqhn2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

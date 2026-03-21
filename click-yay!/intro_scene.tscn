@@ -60,6 +60,25 @@ theme_override_font_sizes/font_size = 219
 text = "YAY"
 flat = true
 
+[node name="Alt Yay" type="Button" parent="." unique_id=992105593]
+offset_left = -397.00003
+offset_top = -288.00003
+offset_right = -383.07504
+offset_bottom = -280.00003
+scale = Vector2(6.875, 6.875)
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Alt Yay2" type="Button" parent="." unique_id=284327475]
+offset_left = -217.00002
+offset_top = -289.0
+offset_right = -203.07503
+offset_bottom = -281.0
+scale = Vector2(6.875, 6.875)
+flat = true
+
 [connection signal="button_up" from="YAY button" to="." method="_on_yay_button_button_up"]
 [connection signal="button_up" from="YAY button2" to="." method="_on_yay_button_2_button_up"]
 [connection signal="button_up" from="YAY button3" to="." method="_on_yay_button_3_button_up"]
+[connection signal="pressed" from="Alt Yay" to="." method="_on_alt_yay_pressed"]
+[connection signal="pressed" from="Alt Yay2" to="." method="_on_alt_yay_2_pressed"]

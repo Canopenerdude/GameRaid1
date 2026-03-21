@@ -11,11 +11,19 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_yay_button_button_up() -> void:
-	get_tree().change_scene_to_file("res://Yay_Main.tscn")
+	get_tree().change_scene_to_file("res://Yay_English.tscn")
 
 func _on_yay_button_2_button_up() -> void:
-	get_tree().change_scene_to_file("res://Yay_Main.tscn")
+	get_tree().change_scene_to_file("res://Yay_English.tscn")
 
 
 func _on_yay_button_3_button_up() -> void:
-	get_tree().change_scene_to_file("res://Yay_Main.tscn")
+	get_tree().change_scene_to_file("res://Yay_English.tscn")
+
+
+func _on_alt_yay_pressed() -> void:
+	get_tree().change_scene_to_file("res://Yay_English.tscn")
+
+
+func _on_alt_yay_2_pressed() -> void:
+	get_tree().change_scene_to_file("res://Yay_English.tscn")
