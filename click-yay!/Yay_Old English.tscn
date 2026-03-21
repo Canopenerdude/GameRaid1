@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dkmxt5dliwr3d"]
 
-[ext_resource type="Texture2D" uid="uid://ct3iki7engpgn" path="res://yay-button-normal.png" id="1_5pfck"]
-[ext_resource type="Texture2D" uid="uid://ddq1rsf44jqbn" path="res://yay-button-pressed.png" id="2_cxnaj"]
+[ext_resource type="Texture2D" uid="uid://khqh8hg1y86k" path="res://old-yay-normal.png" id="1_5pfck"]
+[ext_resource type="Texture2D" uid="uid://bfb15dtsfxaa" path="res://old-yay-pressed.png" id="2_cxnaj"]
 [ext_resource type="Script" uid="uid://bpcjq0jxyqmcq" path="res://texture_button.gd" id="3_3qs27"]
 [ext_resource type="AudioStream" uid="uid://2ylrd2irkmgf" path="res://Audio/youwon.wav" id="4_a0ktm"]
 [ext_resource type="Texture2D" uid="uid://di5sd0wapcs58" path="res://reset-transparent.png" id="5_npcqr"]

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c4l6f01si1qg1"]
 
-[ext_resource type="Texture2D" uid="uid://ct3iki7engpgn" path="res://yay-button-normal.png" id="1_f71x8"]
-[ext_resource type="Texture2D" uid="uid://ddq1rsf44jqbn" path="res://yay-button-pressed.png" id="2_0w20a"]
+[ext_resource type="Texture2D" uid="uid://bpdc1varxk4di" path="res://medieval-yay-pressed.png" id="1_p74w3"]
 [ext_resource type="Script" uid="uid://bpcjq0jxyqmcq" path="res://texture_button.gd" id="3_l4itf"]
 [ext_resource type="AudioStream" uid="uid://2ylrd2irkmgf" path="res://Audio/youwon.wav" id="4_5oadm"]
 [ext_resource type="Texture2D" uid="uid://di5sd0wapcs58" path="res://reset-transparent.png" id="5_0qsme"]
@@ -17,6 +16,9 @@ gradient = SubResource("Gradient_sfphs")
 width = 1182
 height = 714
 fill_to = Vector2(1, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p74w3"]
+load_path = "res://.godot/imported/medieval-yay-normal.png-16176e963bc1ad536cbbed0acc3322c4.ctex"
 
 [sub_resource type="LabelSettings" id="LabelSettings_sqhn2"]
 font_size = 45
@@ -52,8 +54,8 @@ offset_bottom = -84.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(10, 10)
-texture_normal = ExtResource("1_f71x8")
-texture_pressed = ExtResource("2_0w20a")
+texture_normal = SubResource("CompressedTexture2D_p74w3")
+texture_pressed = ExtResource("1_p74w3")
 script = ExtResource("3_l4itf")
 
 [node name="Alex_Sound" type="AudioStreamPlayer2D" parent="." unique_id=315060128]
