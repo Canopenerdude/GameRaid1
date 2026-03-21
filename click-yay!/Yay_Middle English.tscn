@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://di5sd0wapcs58" path="res://reset-transparent.png" id="5_0qsme"]
 [ext_resource type="Texture2D" uid="uid://den13ohddp2bx" path="res://reset-pressed.png" id="6_wfkpc"]
 [ext_resource type="Texture2D" uid="uid://dfh8jao7rtjdv" path="res://reset-filled.png" id="7_8blcb"]
+[ext_resource type="Texture2D" uid="uid://dnvpwxeskkge7" path="res://x-button.png" id="7_f71x8"]
+[ext_resource type="Texture2D" uid="uid://bsplvmnpgtlmy" path="res://arrow-button.png" id="8_0w20a"]
 
 [sub_resource type="Gradient" id="Gradient_sfphs"]
 offsets = PackedFloat32Array(0.012019231, 0.50721157, 1)
@@ -22,16 +24,6 @@ load_path = "res://.godot/imported/medieval-yay-normal.png-16176e963bc1ad536cbbe
 
 [sub_resource type="LabelSettings" id="LabelSettings_sqhn2"]
 font_size = 45
-
-[sub_resource type="Gradient" id="Gradient_mgger"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_qainw"]
-gradient = SubResource("Gradient_mgger")
-
-[sub_resource type="Gradient" id="Gradient_f71x8"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_0w20a"]
-gradient = SubResource("Gradient_f71x8")
 
 [node name="Node2D" type="Node2D" unique_id=1959497165]
 
@@ -92,19 +84,23 @@ theme_override_font_sizes/font_size = 32
 text = "Temp"
 
 [node name="TextureButton3" type="TextureButton" parent="." unique_id=2004375810]
+texture_filter = 1
 offset_left = -557.0
 offset_top = -311.0
-offset_right = -491.0
-offset_bottom = -247.0
-texture_normal = SubResource("GradientTexture2D_qainw")
+offset_right = -539.0
+offset_bottom = -293.0
+scale = Vector2(4.62, 4.62)
+texture_normal = ExtResource("7_f71x8")
 
-[node name="Next_button" type="TextureButton" parent="." unique_id=783482575]
-offset_left = 514.615
-offset_top = -20.25
-offset_right = 554.6151
-offset_bottom = 19.75
-texture_normal = SubResource("GradientTexture2D_0w20a")
+[node name="Next_button" type="TextureButton" parent="." unique_id=446151959]
+texture_filter = 1
+offset_left = 491.00006
+offset_top = -25.000002
+offset_right = 508.00006
+offset_bottom = -11.000002
+scale = Vector2(4.045, 4.045)
+texture_normal = ExtResource("8_0w20a")
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
-[connection signal="button_up" from="TextureButton3" to="TextureButton" method="_on_texture_button_3_button_up"]
+[connection signal="pressed" from="TextureButton3" to="TextureButton" method="_on_texture_button_3_pressed"]
 [connection signal="pressed" from="Next_button" to="TextureButton" method="_on_next_button_pressed"]
