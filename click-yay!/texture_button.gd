@@ -14,12 +14,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:	
 	counter_display.text = str(count)
 	
-	if currentScene != "res://Yay_Klingon.tscn":
+	if currentScene != "res://Yay_English.tscn":
 		if count == 10:
 			$"../Next_button".disabled = false
 			$"../Next_button".visible = true
 	
-	if currentScene != "res://Yay_Klingon.tscn":
+	if currentScene != "res://Yay_English.tscn":
 		if count > 10:
 			count = 10
 	
