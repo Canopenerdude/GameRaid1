@@ -17,7 +17,9 @@ font_size = 45
 [node name="Node2D" type="Node2D" unique_id=1959497165]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1854624668]
+modulate = Color(0.27058825, 0.27058825, 0.27058825, 1)
 z_index = -3
+texture_filter = 1
 position = Vector2(2.5000305, -2.9999847)
 scale = Vector2(9.101562, 5.1874995)
 texture = ExtResource("1_a0ktm")
