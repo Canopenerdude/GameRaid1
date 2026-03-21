@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://c7peoknwoaur0"]
+[gd_scene format=3 uid="uid://bnvr7iylpe7ky"]
 
-[ext_resource type="Texture2D" uid="uid://ct3iki7engpgn" path="res://yay-button-normal.png" id="1_w7swh"]
-[ext_resource type="Texture2D" uid="uid://ddq1rsf44jqbn" path="res://yay-button-pressed.png" id="2_r6sv3"]
-[ext_resource type="Script" uid="uid://bpcjq0jxyqmcq" path="res://texture_button.gd" id="3_u7ryu"]
-[ext_resource type="AudioStream" uid="uid://2ylrd2irkmgf" path="res://Audio/youwon.wav" id="4_r33ly"]
-[ext_resource type="Texture2D" uid="uid://di5sd0wapcs58" path="res://reset-transparent.png" id="5_rdlgu"]
-[ext_resource type="Texture2D" uid="uid://den13ohddp2bx" path="res://reset-pressed.png" id="6_e1lb8"]
-[ext_resource type="Texture2D" uid="uid://dfh8jao7rtjdv" path="res://reset-filled.png" id="7_tnsio"]
+[ext_resource type="Texture2D" uid="uid://ct3iki7engpgn" path="res://yay-button-normal.png" id="1_f4ybt"]
+[ext_resource type="Texture2D" uid="uid://ddq1rsf44jqbn" path="res://yay-button-pressed.png" id="2_bxgcs"]
+[ext_resource type="Script" uid="uid://bpcjq0jxyqmcq" path="res://texture_button.gd" id="3_meewk"]
+[ext_resource type="AudioStream" uid="uid://2ylrd2irkmgf" path="res://Audio/youwon.wav" id="4_yjfdj"]
+[ext_resource type="Texture2D" uid="uid://di5sd0wapcs58" path="res://reset-transparent.png" id="5_ayr52"]
+[ext_resource type="Texture2D" uid="uid://den13ohddp2bx" path="res://reset-pressed.png" id="6_k3yu4"]
+[ext_resource type="Texture2D" uid="uid://dfh8jao7rtjdv" path="res://reset-filled.png" id="7_5rv07"]
 
 [sub_resource type="Gradient" id="Gradient_sfphs"]
 offsets = PackedFloat32Array(0.012019231, 0.50721157, 1)
@@ -26,10 +26,10 @@ font_size = 45
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_qainw"]
 gradient = SubResource("Gradient_mgger")
 
-[sub_resource type="Gradient" id="Gradient_w7swh"]
+[sub_resource type="Gradient" id="Gradient_qainw"]
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_r6sv3"]
-gradient = SubResource("Gradient_w7swh")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_quts2"]
+gradient = SubResource("Gradient_qainw")
 
 [node name="Node2D" type="Node2D" unique_id=1959497165]
 
@@ -53,12 +53,12 @@ offset_bottom = -84.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(10, 10)
-texture_normal = ExtResource("1_w7swh")
-texture_pressed = ExtResource("2_r6sv3")
-script = ExtResource("3_u7ryu")
+texture_normal = ExtResource("1_f4ybt")
+texture_pressed = ExtResource("2_bxgcs")
+script = ExtResource("3_meewk")
 
 [node name="Alex_Sound" type="AudioStreamPlayer2D" parent="." unique_id=315060128]
-stream = ExtResource("4_r33ly")
+stream = ExtResource("4_yjfdj")
 volume_db = 3.493
 
 [node name="Label" type="Label" parent="." unique_id=649480505]
@@ -66,7 +66,7 @@ offset_left = -270.95
 offset_top = -282.0
 offset_right = 272.05
 offset_bottom = -143.0
-text = "Click Gegnt"
+text = "Click Hlja'"
 label_settings = SubResource("LabelSettings_sqhn2")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -78,11 +78,11 @@ offset_top = 231.0
 offset_right = -519.0
 offset_bottom = 262.0
 scale = Vector2(2.29, 2.29)
-texture_normal = ExtResource("5_rdlgu")
-texture_pressed = ExtResource("6_e1lb8")
-texture_hover = ExtResource("7_tnsio")
+texture_normal = ExtResource("5_ayr52")
+texture_pressed = ExtResource("6_k3yu4")
+texture_hover = ExtResource("7_5rv07")
 
-[node name="Label2" type="Label" parent="." unique_id=825559752]
+[node name="Counter" type="Label" parent="." unique_id=825559752]
 offset_left = 442.0
 offset_top = 255.0
 offset_right = 561.0
@@ -97,12 +97,12 @@ offset_right = -491.0
 offset_bottom = -247.0
 texture_normal = SubResource("GradientTexture2D_qainw")
 
-[node name="Next_button" type="TextureButton" parent="." unique_id=1301374493]
+[node name="Next_button" type="TextureButton" parent="." unique_id=781939326]
 offset_left = 514.615
 offset_top = -20.25
 offset_right = 554.6151
 offset_bottom = 19.75
-texture_normal = SubResource("GradientTexture2D_r6sv3")
+texture_normal = SubResource("GradientTexture2D_quts2")
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="Next_button" to="TextureButton" method="_on_next_button_pressed"]

@@ -1,9 +1,12 @@
-[gd_scene format=3 uid="uid://cr43g1l8rniiu"]
+[gd_scene format=3 uid="uid://cl7mv3i1x7evi"]
 
 [ext_resource type="Texture2D" uid="uid://ct3iki7engpgn" path="res://yay-button-normal.png" id="1_sfphs"]
 [ext_resource type="Script" uid="uid://bpcjq0jxyqmcq" path="res://texture_button.gd" id="1_sqhn2"]
 [ext_resource type="Texture2D" uid="uid://ddq1rsf44jqbn" path="res://yay-button-pressed.png" id="2_2jjgh"]
 [ext_resource type="AudioStream" uid="uid://2ylrd2irkmgf" path="res://Audio/youwon.wav" id="2_4wdan"]
+[ext_resource type="Texture2D" uid="uid://di5sd0wapcs58" path="res://reset-transparent.png" id="5_mgger"]
+[ext_resource type="Texture2D" uid="uid://den13ohddp2bx" path="res://reset-pressed.png" id="6_qainw"]
+[ext_resource type="Texture2D" uid="uid://dfh8jao7rtjdv" path="res://reset-filled.png" id="7_quts2"]
 
 [sub_resource type="Gradient" id="Gradient_sfphs"]
 offsets = PackedFloat32Array(0.012019231, 0.50721157, 1)
@@ -17,6 +20,11 @@ fill_to = Vector2(1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_sqhn2"]
 font_size = 45
+
+[sub_resource type="Gradient" id="Gradient_mgger"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qainw"]
+gradient = SubResource("Gradient_mgger")
 
 [node name="Node2D" type="Node2D" unique_id=1959497165]
 
@@ -49,13 +57,39 @@ stream = ExtResource("2_4wdan")
 volume_db = 3.493
 
 [node name="Label" type="Label" parent="." unique_id=649480505]
-offset_left = -271.0
-offset_top = -280.645
-offset_right = 272.0
-offset_bottom = -141.64499
-text = "Yo Yo Yo Click Yay, Bitch"
+offset_left = -270.95
+offset_top = -282.0
+offset_right = 272.05
+offset_bottom = -143.0
+text = "Click Yay  "
 label_settings = SubResource("LabelSettings_sqhn2")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=750626148]
+texture_filter = 1
+offset_left = -549.0
+offset_top = 231.0
+offset_right = -519.0
+offset_bottom = 262.0
+scale = Vector2(2.29, 2.29)
+texture_normal = ExtResource("5_mgger")
+texture_pressed = ExtResource("6_qainw")
+texture_hover = ExtResource("7_quts2")
+
+[node name="Label2" type="Label" parent="." unique_id=825559752]
+offset_left = 442.0
+offset_top = 255.0
+offset_right = 561.0
+offset_bottom = 305.0
+theme_override_font_sizes/font_size = 32
+text = "Temp"
+
+[node name="TextureButton3" type="TextureButton" parent="." unique_id=2004375810]
+offset_left = -557.0
+offset_top = -311.0
+offset_right = -491.0
+offset_bottom = -247.0
+texture_normal = SubResource("GradientTexture2D_qainw")
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

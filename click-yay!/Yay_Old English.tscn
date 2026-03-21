@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://dkmxt5dliwr3d"]
 
-[ext_resource type="Texture2D" uid="uid://ct3iki7engpgn" path="res://yay-button-normal.png" id="1_s7am5"]
-[ext_resource type="Texture2D" uid="uid://ddq1rsf44jqbn" path="res://yay-button-pressed.png" id="2_xy14o"]
-[ext_resource type="Script" uid="uid://bpcjq0jxyqmcq" path="res://texture_button.gd" id="3_ekcvl"]
-[ext_resource type="AudioStream" uid="uid://2ylrd2irkmgf" path="res://Audio/youwon.wav" id="4_5pfck"]
+[ext_resource type="Texture2D" uid="uid://ct3iki7engpgn" path="res://yay-button-normal.png" id="1_5pfck"]
+[ext_resource type="Texture2D" uid="uid://ddq1rsf44jqbn" path="res://yay-button-pressed.png" id="2_cxnaj"]
+[ext_resource type="Script" uid="uid://bpcjq0jxyqmcq" path="res://texture_button.gd" id="3_3qs27"]
+[ext_resource type="AudioStream" uid="uid://2ylrd2irkmgf" path="res://Audio/youwon.wav" id="4_a0ktm"]
+[ext_resource type="Texture2D" uid="uid://di5sd0wapcs58" path="res://reset-transparent.png" id="5_npcqr"]
+[ext_resource type="Texture2D" uid="uid://den13ohddp2bx" path="res://reset-pressed.png" id="6_vbny1"]
+[ext_resource type="Texture2D" uid="uid://dfh8jao7rtjdv" path="res://reset-filled.png" id="7_0o31v"]
 
 [sub_resource type="Gradient" id="Gradient_sfphs"]
 offsets = PackedFloat32Array(0.012019231, 0.50721157, 1)
@@ -17,6 +20,16 @@ fill_to = Vector2(1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_sqhn2"]
 font_size = 45
+
+[sub_resource type="Gradient" id="Gradient_mgger"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qainw"]
+gradient = SubResource("Gradient_mgger")
+
+[sub_resource type="Gradient" id="Gradient_5pfck"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cxnaj"]
+gradient = SubResource("Gradient_5pfck")
 
 [node name="Node2D" type="Node2D" unique_id=1959497165]
 
@@ -40,22 +53,56 @@ offset_bottom = -84.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(10, 10)
-texture_normal = ExtResource("1_s7am5")
-texture_pressed = ExtResource("2_xy14o")
-script = ExtResource("3_ekcvl")
+texture_normal = ExtResource("1_5pfck")
+texture_pressed = ExtResource("2_cxnaj")
+script = ExtResource("3_3qs27")
 
 [node name="Alex_Sound" type="AudioStreamPlayer2D" parent="." unique_id=315060128]
-stream = ExtResource("4_5pfck")
+stream = ExtResource("4_a0ktm")
 volume_db = 3.493
 
 [node name="Label" type="Label" parent="." unique_id=649480505]
-offset_left = -271.0
-offset_top = -280.645
-offset_right = 272.0
-offset_bottom = -141.64499
-text = "Yo Yo Yo Click Yay, Bitch"
+offset_left = -270.95
+offset_top = -282.0
+offset_right = 272.05
+offset_bottom = -143.0
+text = "Click Hāl"
 label_settings = SubResource("LabelSettings_sqhn2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=750626148]
+texture_filter = 1
+offset_left = -549.0
+offset_top = 231.0
+offset_right = -519.0
+offset_bottom = 262.0
+scale = Vector2(2.29, 2.29)
+texture_normal = ExtResource("5_npcqr")
+texture_pressed = ExtResource("6_vbny1")
+texture_hover = ExtResource("7_0o31v")
+
+[node name="Label2" type="Label" parent="." unique_id=825559752]
+offset_left = 442.0
+offset_top = 255.0
+offset_right = 561.0
+offset_bottom = 305.0
+theme_override_font_sizes/font_size = 32
+text = "Temp"
+
+[node name="TextureButton3" type="TextureButton" parent="." unique_id=2004375810]
+offset_left = -557.0
+offset_top = -311.0
+offset_right = -491.0
+offset_bottom = -247.0
+texture_normal = SubResource("GradientTexture2D_qainw")
+
+[node name="Next_button" type="TextureButton" parent="." unique_id=1086751889]
+offset_left = 514.615
+offset_top = -20.25
+offset_right = 554.6151
+offset_bottom = 19.75
+texture_normal = SubResource("GradientTexture2D_cxnaj")
+
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Next_button" to="TextureButton" method="_on_next_button_pressed"]
