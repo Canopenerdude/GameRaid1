@@ -30,3 +30,11 @@ func _on_next_button_pressed() -> void:
 		get_tree().change_scene_to_file("res://Yay_English.tscn")
 	if currentScene == "res://Yay_English.tscn" and counter_display.text == "10":
 		get_tree().change_scene_to_file("res://Yay_Klingon.tscn")
+
+
+func _on_reset_button_up() -> void:
+	get_tree().change_scene_to_file("res://Yay_Norse.tscn")
+
+
+func _on_texture_button_3_button_up() -> void:
+	pass # Replace with function body.

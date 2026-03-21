@@ -41,8 +41,7 @@ texture = SubResource("GradientTexture2D_sfphs")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=309436364]
 texture_filter = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = -1
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
@@ -71,7 +70,7 @@ label_settings = SubResource("LabelSettings_sqhn2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton2" type="TextureButton" parent="." unique_id=750626148]
+[node name="Reset" type="TextureButton" parent="." unique_id=750626148]
 texture_filter = 1
 offset_left = -549.0
 offset_top = 231.0
@@ -105,4 +104,5 @@ offset_bottom = 19.75
 texture_normal = SubResource("GradientTexture2D_0w20a")
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="button_up" from="TextureButton3" to="TextureButton" method="_on_texture_button_3_button_up"]
 [connection signal="pressed" from="Next_button" to="TextureButton" method="_on_next_button_pressed"]

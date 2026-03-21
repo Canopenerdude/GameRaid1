@@ -66,7 +66,7 @@ label_settings = SubResource("LabelSettings_sqhn2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton2" type="TextureButton" parent="." unique_id=750626148]
+[node name="Reset" type="TextureButton" parent="." unique_id=750626148]
 texture_filter = 1
 offset_left = -549.0
 offset_top = 231.0
@@ -93,3 +93,4 @@ offset_bottom = -247.0
 texture_normal = SubResource("GradientTexture2D_qainw")
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="button_up" from="Reset" to="TextureButton" method="_on_reset_button_up"]
