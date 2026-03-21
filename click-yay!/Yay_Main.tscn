@@ -1,10 +1,81 @@
 [gd_scene format=3 uid="uid://cr43g1l8rniiu"]
 
+[ext_resource type="Script" uid="uid://bpcjq0jxyqmcq" path="res://texture_button.gd" id="1_sqhn2"]
+[ext_resource type="AudioStream" uid="uid://2ylrd2irkmgf" path="res://Audio/youwon.wav" id="2_4wdan"]
+
+[sub_resource type="Gradient" id="Gradient_4wdan"]
+offsets = PackedFloat32Array(0.012019231, 0.50721157, 1)
+colors = PackedColorArray(0.60166335, 0.35990003, 0.61, 1, 0.588, 0.84, 0.6216, 1, 1, 0.26, 0.27233315, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sfphs"]
+gradient = SubResource("Gradient_4wdan")
+width = 1182
+height = 714
+fill_to = Vector2(1, 1)
+
+[sub_resource type="Gradient" id="Gradient_sct8f"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3lrss"]
+gradient = SubResource("Gradient_sct8f")
+width = 400
+height = 200
+
+[sub_resource type="Gradient" id="Gradient_3lrss"]
+colors = PackedColorArray(0, 0.8901961, 0, 1, 0, 0.3833332, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sqhn2"]
+gradient = SubResource("Gradient_3lrss")
+width = 400
+height = 200
+
+[sub_resource type="Gradient" id="Gradient_sqhn2"]
+colors = PackedColorArray(0.42, 0.42, 0.42, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4wdan"]
+gradient = SubResource("Gradient_sqhn2")
+width = 400
+height = 200
+
+[sub_resource type="LabelSettings" id="LabelSettings_sqhn2"]
+font_size = 45
+
 [node name="Node2D" type="Node2D" unique_id=1959497165]
 
-[node name="Button" type="Button" parent="." unique_id=1407884789]
-offset_left = 377.0
-offset_top = 263.0
-offset_right = 816.0
-offset_bottom = 381.0
-text = "YAY"
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1854624668]
+z_index = -3
+texture = SubResource("GradientTexture2D_sfphs")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=994944958]
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=309436364]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("GradientTexture2D_3lrss")
+texture_pressed = SubResource("GradientTexture2D_sqhn2")
+texture_hover = SubResource("GradientTexture2D_4wdan")
+script = ExtResource("1_sqhn2")
+
+[node name="Alex_Sound" type="AudioStreamPlayer2D" parent="." unique_id=315060128]
+stream = ExtResource("2_4wdan")
+volume_db = 3.493
+
+[node name="Label" type="Label" parent="." unique_id=649480505]
+offset_left = -271.0
+offset_top = -280.645
+offset_right = 272.0
+offset_bottom = -141.64499
+text = "Yo Yo Yo Click Yay, Bitch"
+label_settings = SubResource("LabelSettings_sqhn2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
