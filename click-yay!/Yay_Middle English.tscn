@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bpdc1varxk4di" path="res://medieval-yay-pressed.png" id="1_p74w3"]
 [ext_resource type="Script" uid="uid://bpcjq0jxyqmcq" path="res://texture_button.gd" id="3_l4itf"]
-[ext_resource type="AudioStream" uid="uid://2ylrd2irkmgf" path="res://Audio/youwon.wav" id="4_5oadm"]
+[ext_resource type="AudioStream" uid="uid://buwtn24tmehxx" path="res://Audio/YouWonMidEng.wav" id="3_p74w3"]
 [ext_resource type="Texture2D" uid="uid://di5sd0wapcs58" path="res://reset-transparent.png" id="5_0qsme"]
 [ext_resource type="Texture2D" uid="uid://den13ohddp2bx" path="res://reset-pressed.png" id="6_wfkpc"]
 [ext_resource type="Texture2D" uid="uid://dfh8jao7rtjdv" path="res://reset-filled.png" id="7_8blcb"]
@@ -59,7 +59,7 @@ texture_pressed = ExtResource("1_p74w3")
 script = ExtResource("3_l4itf")
 
 [node name="Alex_Sound" type="AudioStreamPlayer2D" parent="." unique_id=315060128]
-stream = ExtResource("4_5oadm")
+stream = ExtResource("3_p74w3")
 volume_db = 3.493
 
 [node name="Label" type="Label" parent="." unique_id=649480505]

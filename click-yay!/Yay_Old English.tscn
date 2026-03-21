@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dkmxt5dliwr3d"]
 
-[ext_resource type="Texture2D" uid="uid://khqh8hg1y86k" path="res://old-yay-normal.png" id="1_5pfck"]
-[ext_resource type="Texture2D" uid="uid://bfb15dtsfxaa" path="res://old-yay-pressed.png" id="2_cxnaj"]
+[ext_resource type="Texture2D" uid="uid://cr1g1s5401f73" path="res://norse-yay-normal.png" id="1_5pfck"]
+[ext_resource type="Texture2D" uid="uid://c3ui62js5vtk8" path="res://norse-yay-pressed.png" id="2_cxnaj"]
 [ext_resource type="Script" uid="uid://bpcjq0jxyqmcq" path="res://texture_button.gd" id="3_3qs27"]
-[ext_resource type="AudioStream" uid="uid://2ylrd2irkmgf" path="res://Audio/youwon.wav" id="4_a0ktm"]
+[ext_resource type="AudioStream" uid="uid://c0r2e2kujgl6" path="res://Audio/YouWonOldEng.wav" id="4_5pfck"]
 [ext_resource type="Texture2D" uid="uid://di5sd0wapcs58" path="res://reset-transparent.png" id="5_npcqr"]
 [ext_resource type="Texture2D" uid="uid://den13ohddp2bx" path="res://reset-pressed.png" id="6_vbny1"]
 [ext_resource type="Texture2D" uid="uid://dfh8jao7rtjdv" path="res://reset-filled.png" id="7_0o31v"]
@@ -58,7 +58,7 @@ texture_pressed = ExtResource("2_cxnaj")
 script = ExtResource("3_3qs27")
 
 [node name="Alex_Sound" type="AudioStreamPlayer2D" parent="." unique_id=315060128]
-stream = ExtResource("4_a0ktm")
+stream = ExtResource("4_5pfck")
 volume_db = 3.493
 
 [node name="Label" type="Label" parent="." unique_id=649480505]
