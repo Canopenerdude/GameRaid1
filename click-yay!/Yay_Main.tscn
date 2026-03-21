@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cr43g1l8rniiu"]
+
+[node name="Node2D" type="Node2D" unique_id=1959497165]
+
+[node name="Button" type="Button" parent="." unique_id=1407884789]
+offset_left = 377.0
+offset_top = 263.0
+offset_right = 816.0
+offset_bottom = 381.0
+text = "YAY"
